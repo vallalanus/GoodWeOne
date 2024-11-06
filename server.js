@@ -58,6 +58,9 @@ function calculatePowerFactor(realPower, voltage, current) {
 // Periodically fetch and store data every 30 seconds
 setInterval(async () => {
     try {
+
+        console.log('AUTH_URL:', AUTH_URL);
+        console.log('API_URL:', API_URL);   
         // Step 1: Obtain a token
         const loginResponse = await axios.post(AUTH_URL, LOGIN_PAYLOAD, {
             headers: {
