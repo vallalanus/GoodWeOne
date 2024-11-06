@@ -52,10 +52,7 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - name: Start Node.js application
-        run: |
-          npm install
-          npm start
+     
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
